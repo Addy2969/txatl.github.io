@@ -283,7 +283,10 @@ img::selection {
 img::-moz-selection {
   background: transparent
 }
-
+.logo-pic{
+  width: 45px;
+  height: 45px;
+}
 body {
   -webkit-tap-highlight-color: #FFF498
 }
@@ -1136,7 +1139,7 @@ body {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  width: 900px;
+  width: 100%;
   max-width: 75%;
   height: 100%;
   -webkit-box-orient: vertical;
@@ -1158,42 +1161,38 @@ body {
 }
 
 .about--banner {
-  position: relative;
+  
   height: 475px
 }
 
-.about--banner::before {
-  content: "";
-  position: absolute;
-  top: 20px;
-  left: 200px;
-  -webkit-transform: rotate(-25deg);
-  transform: rotate(-25deg);
-  border: 5px solid #0f33ff;
-  border-right-color: transparent;
-  border-bottom-color: transparent
+
+.img-abu{
+  position: relative;
+  width: 600px;
+  height: 400px;
+  align-items: center;
+  margin-left: 21%;
 }
 
-/*.about--banner::after {
-  content: "";
-  position: absolute;
-  top: 75px;
-  left: 400px;
-  -webkit-transform: rotate(45deg);
-  transform: rotate(45deg);
-  width: 10px;
-  height: 10px;
-  background-color: #0f33ff
-}*/
-
-.about--banner h2 {
+.abu-us-head{
+  font-weight: 700;
+  font-size: 40px;
   position: relative;
-  margin-top: 10%;
-  padding-inline-end: 45%;
-  font-size: 22px;
-  font-weight: 900;
+  padding-top: 5%;
+  text-align: center; 
+  font-family: "Montserrat", sans-serif;
+
+}
+
+.about--banner li {
+  padding-top: 3%;
+  position: relative; 
+  text-align: left;
+  font-size: 20px;
   line-height: 1;
-  z-index: 1
+  z-index: 1;
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  padding-bottom: 0;
 }
 
 /*.about--banner h2::before {
@@ -1531,7 +1530,11 @@ body {
   text-transform: uppercase;
   background-color: #0f33ff;
   border: none;
-  border-radius: 0
+  border-radius: 20px;
+}
+
+.work-request input[type="submit"]:hover{
+  background-color: #3b57f5;
 }
 
 .work-request input[type="submit"]:focus {
@@ -1643,7 +1646,17 @@ body {
 .work-request--information input[type="text"],
 .work-request--information input[type="email"] {
   width: 100%;
-  padding: 0 0 5px 0;
+  padding: 15px 0 5px 0;
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid #fff;
+  border-radius: 0
+}
+
+.work-request--information input[type="other"] 
+ {
+  width: 100%;
+  padding: 15px 0 5px 0;
   background-color: transparent;
   border: none;
   border-bottom: 1px solid #fff;
@@ -2124,242 +2137,3 @@ textarea {
 
 
 
-.about {
-  position: relative;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  width: 900px;
-  max-width: 75%;
-  height: 100%;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  margin: 0 auto
-}
-
-@media (max-width: 1180px) {
-  .about {
-    max-width: 100%
-  }
-}
-
-.about--banner {
-  position: relative;
-  height: 475px
-}
-
-.about--banner::before {
-  content: "";
-  position: absolute;
-  top: 20px;
-  left: 200px;
-  -webkit-transform: rotate(-25deg);
-  transform: rotate(-25deg);
-  border: 5px solid #0f33ff;
-  border-right-color: transparent;
-  border-bottom-color: transparent
-}
-
-/*.about--banner::after {
-  content: "";
-  position: absolute;
-  top: 75px;
-  left: 400px;
-  -webkit-transform: rotate(45deg);
-  transform: rotate(45deg);
-  width: 10px;
-  height: 10px;
-  background-color: #0f33ff
-}*/
-
-.about--banner h2 {
-  position: relative;
-  margin-top: 10%;
-  padding-inline-end: 45%;
-  font-size: 22px;
-  font-weight: 900;
-  line-height: 1;
-  z-index: 1
-}
-
-/*.about--banner h2::before {
-  content: "";
-  position: absolute;
-  top: 60px;
-  left: 268px;
-  width: 30px;
-  height: 30px;
-  background-color: #0f33ff;
-  border-radius: 50%
-}
-
-.about--banner h2::after {
-  content: "";
-  position: absolute;
-  top: 255px;
-  left: 255px;
-  width: 10px;
-  height: 10px;
-  background-color: #0f33ff
-}*/
-
-.achi--banner a {
-  padding: 5px 17px 5px 0;
-  text-decoration: none;
-  color: #fff;
-  font-weight: 700;
-  text-transform: uppercase;
-  background-color: transparent
-}
-
-.achi--banner a:hover svg {
-  left: 10px
-}
-
-.achi--banner a svg {
-  position: relative;
-  left: 5px;
-  width: 15px;
-  fill: #fff;
-  -webkit-transition: left .2s ease-in-out;
-  transition: left .2s ease-in-out
-}
-
-.achi--banner img {
-  position: absolute;
-  bottom: 160px;
-  right: -12px
-}
-
-.achi--options {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  max-width: 600px;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-  margin: 0;
-  padding: 0;
-  list-style: none
-}
-
-.achi--options>a {
-  position: relative;
-  width: 150px;
-  height: 75px;
-  text-decoration: none;
-  color: #fff;
-  border: 10px solid #0f33ff;
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat
-}
-
-.achi--options>a:nth-child(1) {
-  background-image: url("../img/about-winners.jpg")
-}
-
-.achi--options>a:nth-child(2) {
-  background-image: url("../img/about-philosophy.jpg")
-}
-
-.achi--options>a:nth-child(3) {
-  background-image: url("../img/about-history.jpg")
-}
-
-.achi--options>a:hover h3 {
-  bottom: -50px
-}
-
-.achi--options h3 {
-  position: absolute;
-  bottom: -38px;
-  left: 10px;
-  font-size: 16px;
-  text-transform: uppercase;
-  -webkit-transition: bottom .2s ease-in-out, left .2s ease-in-out;
-  transition: bottom .2s ease-in-out, left .2s ease-in-out
-}
-
-@media (max-width: 767px) {
-  .achi--banner {
-    height: 305px
-  }
-
-  .achi--banner::before {
-    top: 0;
-    left: 125px
-  }
-
-  .achi--banner::after {
-    top: 35px;
-    left: 260px
-  }
-
-  .achi--banner h2 {
-    margin-top: 25px;
-    font-size: 25px
-  }
-
-  .achi--banner h2::before {
-    top: 28px;
-    left: 168px
-  }
-
-  .achi--banner h2::after {
-    top: 163px;
-    left: 163px
-  }
-
-  .achi--banner img {
-    width: 315px
-  }
-}
-
-@media (max-width: 600px) {
-  .achi--banner {
-    height: auto
-  }
-
-  .achi--banner::before {
-    left: 155px
-  }
-
-  .achi--banner::after {
-    left: 310px
-  }
-
-  .achi--banner h2 {
-    margin-top: 0;
-    font-size: 20px
-  }
-
-  .achi--banner h2::before {
-    top: 43px;
-    left: 214px
-  }
-
-  .achi--banner h2::after {
-    top: 205px;
-    left: 205px
-  }
-
-  .achi--banner img {
-    display: none
-  }
-
-  .achi--options {
-    display: none
-  }
-}
